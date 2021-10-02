@@ -1,11 +1,19 @@
-var img = document.querySelector('img');
+var button = document.querySelector(`button`);
+var heading = document.querySelector(`h1`);
 
-img.onclick = () => {
-    var src = img.getAttribute('src');
+function setUserName() {
+    var name = prompt(`Please enter your name.`)
+    localStorage.setItem(`name`, name);
+    heading.textContent = `${name}`;
+};
 
-    if (src == `images/chelik.jpg`) {
-        img.setAttribute(`src`, `images/chelik3.jpg`);
-    } else {
-        img.setAttribute(`src`, "images/chelik.jpg");
-    };
+if(!localStorage.getItem(`name`)) {
+    setUserName();
+} else {
+    var storName = localStorage.getItem(`name`);
+    heading.textContent = `${storName}`;
+};
+
+button.onclick = function() {
+    setUserName();
 };
