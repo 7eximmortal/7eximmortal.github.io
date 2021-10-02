@@ -1,0 +1,16 @@
+h1 {
+    font-size: 60px;
+    font-family: IBM Plex Sans;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: IBM Plex Sans;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
